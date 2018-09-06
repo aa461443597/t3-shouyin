@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery-2.1.1.min.js"></script> 
+<link href="css/diy.css" rel="stylesheet"> 
+<link href="css/public.css" rel="stylesheet">
+</head>
+<body style="background-color:#4ba634" name="login">
+<div style="width:auto; height:30px; line-height:30px; position:absolute; top:10px; right:10px; background-color:#c8ee8c; box-shadow:0 0 10px #1a7803; border-radius:5px; -webkit-box-shadow:0 0 10px #1a7803; -webkit-border-radius:5px;">
+    <a href="login.html" style=" text-decoration:none; color:#1a7803; font-size:12px; line-height:30px; padding:0 15px;">风格1</a>
+    <a href="login1.html" style=" text-decoration:none; color:#1a7803; font-size:12px; line-height:30px; padding:0 15px;">风格2</a>
+    <a href="login2.html" style=" text-decoration:none; color:#1a7803; font-size:12px; line-height:30px; padding:0 15px;">风格3</a>
+</div>
+<div class="login-main">
+    <form>
+        <input type="text" name="username" placeholder="用户名" required>
+        <input type="password" name="password" class="lock" placeholder="密码">
+        <input type="button" onClick="login()" name="Sign In" value="">	
+    </form>
+</div>
+
+<!--  svg bg  ↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<script type="text/javascript" src="http://www.jq22.com/demo/snowflake20160718/snow.js"></script>
+<!--  svg bg  ↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+
+<script src="js/index.js"></script>
+<script>
+//提交数据
+function login(){
+	
+	var username = $("form input").eq(0).val();
+	var password = $("form input").eq(1).val();
+	
+	if(username == null || username == ""){
+		tips("请输入用户名！",2000);
+	}else if(password == null || password == ""){
+		tips("请输入登录密码！",2000);
+	}
+	
+	$.ajax({
+		type:"POST",//接口类型
+		url:'vipformall/admin_select_admin.php',//接口url
+		dataType:"json",//请求类型
+		async:true,//true异步请求 flase同步请求
+		data:{//$title, $content_url, $time, $type, $do_time, $forum
+			user_name:username,
+			password:password
+			},
+		beforeSend:function(){loadAnimation();},//请求开始时执行
+		success: function(request){
+			loadClose();
+			if(request == 0){
+				tips("用户名或密码错误，请重新输入！",3000);
+			}else{
+				tips("登录成功",2200);
+				localStorage.setItem("catalog_name",request.catalog_name);//门店
+				localStorage.setItem("user_type",request.user_type);//账户类型
+				localStorage.setItem("username",username);//账户名
+				setTimeout(function(){gopage("index.php")}, 2500); 
+			}
+		},
+		timeout : 20000, //超时时间设置，单位毫秒
+		complete : function(XMLHttpRequest,status){
+			complete_tips();
+		}
+	})
+}
+
+$(function(){
+	$("body").css({"height":win_h,"margin":"0"});
+	$(".login-main").css({"left":(win_w-600)/2,"top":(win_h-432)/2-30});
+	
+});
+</script>
+</body>
+</html>
+
+
+                      
+						

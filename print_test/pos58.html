@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>pos-58</title>
+<script language="javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script language="javascript" src="LodopFuncs.js"></script>
+<script language="javascript" type="text/javascript">        
+    var LODOP; //声明为全局变量       
+	       
+	function myPreview() {		       
+		myAddHtml();       
+		LODOP.PREVIEW();		       	
+	};	
+      
+	function myAddHtml() {       
+		LODOP=getLodop();         
+   		LODOP.PRINT_INIT("");
+    	LODOP.ADD_PRINT_TABLE(1,9,"100%","100%",document.getElementById("textarea01").value);
+		LODOP.SET_PRINT_PAGESIZE(3,1385,45,"")	
+	};	       
+</script>  
+</head>
+
+<body>
+<textarea rows="15" id="textarea01" cols="80">
+    <table id="print_tab" border="0" width="160" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC" style="margin-bottom:10px;">
+      <tr>
+        <td width="100%" style="font-size:12px;">
+          郭德强<br />
+          科学家<br />
+          地址：中国北京社会科学院附近东大街西胡同<br />
+          电话：010-88811888<br />
+          郭德强<br />
+          科学家<br />
+          地址：中国北京社会科学院附近东大街西胡同<br />
+          郭德强<br />
+          科学家<br />
+          地址：中国北京社会科学院附近东大街西胡同<br />
+          郭德强<br />
+          科学家<br />
+          地址：中国北京社会科学院附近东大街西胡同<br />
+          郭德强<br />
+          科学家<br />
+          地址：中国北京社会科学院附近东大街西胡同<br />
+          郭德强<br />
+          科学家<br />
+          地址：中国北京社会科学院附近东大街西胡同<br />
+          电话：010-88811888
+        </td>
+      </tr>
+    </table>
+</textarea>
+<input type="button" onclick="myPreview();" value="打印" />
+</body>
+</html>

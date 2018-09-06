@@ -1,0 +1,90 @@
+﻿/*Created%ef%bc%9a2015-12-2+13%3a42%0d%0aCreator%ef%bc%9aDeane%0d%0aCompany%ef%bc%9a%e4%b8%8a%e6%b5%b7%e6%b1%87%e4%bf%9d%e7%a7%91%e6%8a%80%e6%9c%89%e9%99%90%e5%85%ac%e5%8f%b8%0d%0aContact%ef%bc%9aQQ+461443597++Mail+461443597%40qq.com*/
+
+/*全局定义*/
+.clear{ clear:both;}
+.hidden{ display:none;}
+.show{ display:block;}
+.overhid{ overflow:hidden !important;}
+.text_center{ text-align:center !important;}
+.f_l{ float:left !important}
+.f_r{ float:right !important}
+.img_blk{ width:100%; display:block;}
+
+/*50%宽度*/
+.w_50{ width:50% !important;}
+
+/*文字加粗*/
+.bold{ font-weight:bold;}
+
+/*圆角*/
+.borad_l_t{-moz-border-radius: 10px 0px 0px; -webkit-border-radius: 10px 0px 0px 0px; border-radius: 10px 0px 0px;}/*圆角左上*/
+.borad_r_t{-moz-border-radius: 0px 10px 0px 0px; -webkit-border-radius: 0px 10px 0px 0px; border-radius: 0px 10px 0px 0px;}/*圆角右上*/
+.borad_r_b{-moz-border-radius: 0px 0px 10px; -webkit-border-radius: 0px 0px 10px 0px; border-radius: 0px 0px 10px;}/*圆角右下*/
+.borad_l_b{-moz-border-radius: 0px 0px 0px 10px; -webkit-border-radius: 0px 0px 0px 10px; border-radius: 0px 0px 0px 10px;}/*圆角左下*/
+.borad_t{-moz-border-radius: 10px 10px 0px 0px; -webkit-border-radius: 10px 10px 0px 0px; border-radius: 10px 10px 0px 0px;}/*圆角左上右上*/
+.borad_b{-moz-border-radius: 0px 0px 10px 10px; -webkit-border-radius: 0px 0px 10px 10px; border-radius: 0px 0px 10px 10px;}/*圆角左下右下*/
+.borad_l{-moz-border-radius: 10px 0 0px 10px; -webkit-border-radius: 10px 0 0px 10px; border-radius: 10px 0 0px 10px;}/*圆角左上左下*/
+.borad_r{-moz-border-radius: 0px 10px 10px 0px; -webkit-border-radius: 0px 10px 10px 0px; border-radius: 0px 10px 10px 0px;}/*圆角右上右下*/
+.borad_l_t_r_b{-moz-border-radius: 10px 0 10px 0px; -webkit-border-radius: 10px 0 10px 0px; border-radius: 10px 0 10px 0px;}/*圆角左上右下*/
+.borad_r_t_l_b{-moz-border-radius: 0px 10px 0px 10px; -webkit-border-radius: 0px 10px 0px 10px; border-radius: 0px 10px 0px 10px;}/*圆角右上左下*/
+.borad_all_10{-moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px;}/*圆角全部*/
+.borad_all_5{-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}/*圆角全部*/
+.borad_all_3{-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}/*圆角全部*/
+.borad_circles{-moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%;}/*圆角全部*/
+
+/*边线*/
+.bornull{  border:none !important;}
+.bor_bot{ border-bottom:#d7d7d7 solid 1px !important;}
+.bor_top{ border-top:#d7d7d7 solid 1px !important;}
+.bor_rit{ border-right:#d7d7d7 solid 1px !important;}
+.bor_lft{ border-left:#d7d7d7 solid 1px !important;}
+
+/*提示框ios*/
+#alert_ios{ width:30%; z-index:99999; height:auto; background-color:rgba(255,255,255,1); min-height:4rem; position: fixed; left:35%; top:30%; display:none;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+#alert_ios h2{ width:100%; float:left; height:1.8rem; line-height:1.8rem; color:#000; font-size:1rem; text-align:center; margin-top:.5rem;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+#alert_ios h2.color1,#alert_ios h2.color2{ color:#000;}
+#alert_ios p{ width:90%; padding:.2rem 5% .8rem 5%; float:left; line-height:1.5rem; font-size:.8rem; color:#000;}
+#alert_ios ul{ width:100%; float:left; height:2rem; border-top: #CCC solid 1px; padding:0; list-style:none;}
+#alert_ios ul li{ float:left; height:2rem; width:49%; float:left; text-align:center; font-size:1rem; line-height:2rem; cursor:pointer; color:#097cd1;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+#alert_ios ul li.li11{ width:100% !important; border-right:0 !important;}
+#alert_ios ul li.li1{ color:#666 !important; border-right: #CCC solid 1px;}
+
+/*遮罩层*/
+#maskblack{ width:100%; background-color:rgb(0,0,0); top:0; bottom:0; left:0; right:0; position: fixed; z-index:9998;filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; display:none;}
+#alert_black{ width:100%; background-color:rgb(0,0,0); top:0; bottom:0; position: fixed; z-index:99998;filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; display:none;}
+
+/*loading动画 开始*/
+#logo_load{ width:100%; height:100%; background:rgba(255,255,255,0.8); position:fixed; top:0; bottom:0; left:0; right:0;  z-index:9995;
+display: -webkit-box;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center;
+display: -moz-box;-moz-box-orient: horizontal;-moz-box-pack: center;-moz-box-align: center;
+display: -o-box;-o-box-orient: horizontal;-o-box-pack: center;-o-box-align: center;
+display: -ms-box;-ms-box-orient: horizontal;-ms-box-pack: center;-ms-box-align: center;
+display: box;box-orient: horizontal;box-pack: center;box-align: center;}
+.logo_load{ width:2rem; height:2rem;}
+.logo_load img{ width:80px; height:74px; float:left;}
+.logo_load p{ color:#ff5c01; float:left; width:100%; text-align:center; line-height:15px; height:15px; font-size:14px;}
+
+/*等待动画*/
+.spinner1{ width: 2rem; height: 2rem; position: relative;}
+.double-bounce1, .double-bounce2 {width: 100%; height: 100%; border-radius: 50%; background-color: #79ff00; opacity: 0.6; position: absolute; top: 0; left: 0; -webkit-animation: bounce 2.0s infinite ease-in-out; animation: bounce 2.0s infinite ease-in-out;}
+.double-bounce2 {background-color: #53aa04; -webkit-animation-delay: -1.0s; animation-delay: -1.0s; }
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+/*文字溢出用...处理*/
+.text_overflow{overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+
+/*下拉选择弹出框*/
+.dd_list{ width:30%; position: fixed; left:35%; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; background-color:#FFF; box-shadow:0 0 30px rgba(102,102,102,0.9); z-index:9999; display:none;}
+.dd_list h3{ width:100%; border-bottom:#CCC solid 1px; height:2rem; line-height:2rem; font-size:.8rem; text-align:center; color:#000; float:left; font-weight:bold;}
+.dd_list ul{ width:100%; float:left;}
+.dd_list ul li{ width:90%; float:left; padding:0 5%; line-height:1.8rem; text-align:center; color:#555; border-bottom:#EBEBEB solid 1px; font-size:.7rem; list-style:none; cursor:pointer;}
+.dd_list p{ width:100%; float:left; height:1.8rem; line-height:1.8rem; text-align:center; color: #999;}
+
+/*tips*/
+#tips{ font-style:normal; padding:50px 100px; background-color:rgba(0,0,0,0.8); color:#FFF; line-height:1rem; font-size:14px; position:fixed; top:35%; display:block; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; word-wrap: break-word; word-break: normal; text-align:center; box-shadow:0 0 50px #FFFFFF; -webkit-box-shadow:0 0 50px #FFFFFF; z-index:9999;}

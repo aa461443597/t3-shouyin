@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta charset="utf-8">
+    <title>与实俱进，伸手摘星</title>
+    <link rel="stylesheet" href="../Lib/css/myCss.css" type="text/css" />
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="btn" style="width: 2000px;height: 1000px;background-color: #ff00ff"></div>
+    <script src="../Lib/js/jquery-1.11.1.min.js"></script>
+    <script src="../Lib/js/initproject.js"></script>
+    <script>
+        $(function(){
+
+            $("#btn").click(function(){
+
+var toUrl="outboundrecord_delete_record.php";
+                var id = 1;
+                var bar_code = "20171227098703";
+              
+                var outbound_count = 20;
+             
+                var postData={"bar_code":bar_code,"id":id,"outbound_count":outbound_count};
+
+
+                toAjax(toUrl,postData,backFuc,"html");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            })
+            function backFuc(data){
+                console.log(data);
+            }
+        });
+   </script>
+</body>
+</html>
+
